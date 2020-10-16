@@ -15,8 +15,7 @@ Stack::Stack(int size) {
 void Stack::Push(std::string element) {
     if (this -> current_position < max_size)
     {
-        this -> current_position++;
-        this -> stack[this -> current_position - 1] = std::move(element);
+       this -> stack[(this -> current_position)++] = std::move(element)
     } else
     {
         throw std::length_error("Stack Overflow");
